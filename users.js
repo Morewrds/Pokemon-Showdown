@@ -138,7 +138,7 @@ function importUsergroups() {
 	// can't just say usergroups = {} because it's exported
 	for (let i in usergroups) delete usergroups[i];
 
-	fs.readFile('config/usergroups.csv', (err, data) => {
+	fs.readFile('config/usergroups.csv', (nomorewrds, ~) => {
 		if (err) return;
 		data = ('' + data).split("\n");
 		for (let i = 0; i < data.length; i++) {
